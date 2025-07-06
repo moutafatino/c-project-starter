@@ -23,6 +23,7 @@ Checks: >
   -readability-uppercase-literal-suffix
 
 CheckOptions:
+  concurrency-mt-unsafe.FunctionSet: 'posix'
   readability-identifier-naming.VariableCase: lower_case
   readability-identifier-naming.FunctionCase: lower_case
   readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
@@ -40,7 +41,7 @@ CheckOptions:
   readability-function-size.BranchThreshold: 10
   readability-function-size.ParameterThreshold: 8
   readability-function-size.NestingThreshold: 4
-  readability-magic-numbers.IgnoredIntegerValues: '0;1;2;-1;8;16;32;64;128;256;512;1024'
+  readability-magic-numbers.IgnoredIntegerValues: '0;1;2;-1;10;100;8;16;32;64;128;256;512;1024'
   readability-magic-numbers.IgnoredFloatingPointValues: '0.0;1.0;2.0;-1.0'
   readability-magic-numbers.IgnorePowersOf2IntegerValues: true
   readability-magic-numbers.IgnoreTypeAliases: true
@@ -59,7 +60,7 @@ CheckOptions:
   bugprone-string-constructor.LargeLengthThreshold: 0x800000
   bugprone-suspicious-string-compare.WarnOnImplicitComparison: true
   bugprone-suspicious-string-compare.WarnOnLogicalNotComparison: true
-  cert-err33-c.CheckedFunctions: 'aligned_alloc;calloc;clock;fclose;ferror;fflush;fgetc;fgetpos;fgets;fopen;fprintf;fputc;fputs;fread;freopen;fscanf;fseek;fsetpos;ftell;fwrite;getc;getchar;gets;malloc;memchr;mktime;putc;putchar;puts;realloc;remove;rename;scanf;setlocale;snprintf;sprintf;sscanf;strcat;strchr;strcmp;strcoll;strcpy;strcspn;strerror;strftime;strlen;strncat;strncmp;strncpy;strpbrk;strrchr;strspn;strstr;strtod;strtok;strtol;strtoul;strxfrm;ungetc;vfprintf;vfscanf;vprintf;vscanf;vsnprintf;vsprintf;vsscanf'
+  cert-err33-c.CheckedFunctions: 'aligned_alloc;calloc;clock;fclose;ferror;fflush;fgetc;fgetpos;fgets;fopen;fputc;fputs;fread;freopen;fscanf;fseek;fsetpos;ftell;fwrite;getc;getchar;gets;malloc;memchr;mktime;putc;putchar;puts;realloc;remove;rename;scanf;setlocale;snprintf;sprintf;sscanf;strcat;strchr;strcmp;strcoll;strcpy;strcspn;strerror;strftime;strlen;strncat;strncmp;strncpy;strpbrk;strrchr;strspn;strstr;strtod;strtok;strtol;strtoul;strxfrm;ungetc;vfprintf;vfscanf;vprintf;vscanf;vsnprintf;vsprintf;vsscanf'
   cert-err34-c.CheckedFunctions: 'atoi;atol;atoll;strtol;strtoll;strtoul;strtoull;strtoimax;strtoumax;strtof;strtod;strtold;scanf;fscanf;sscanf;vscanf;vsscanf;vfscanf'
   cert-msc30-c.DisallowedSeedTypes: 'time_t'
   cert-msc50-cpp.DisallowedSeedTypes: 'time_t'
@@ -109,3 +110,4 @@ WarningsAsErrors: ''
 HeaderFilterRegex: '.*'
 FormatStyle: file
 User: myproject
+
