@@ -2,6 +2,6 @@
 
 ## Key features
 
-- CMake build system
+- Make build system
 - Code formatting with `clang-format`
 - Static Analysis with `clang-tidy`
