@@ -1,10 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "my_header.h"
 
 int main(void) {
-  int *age = malloc(sizeof(int));
-  const int AGE = 10;
-  *age = AGE;
-  printf("Hello, World! %d\n", *age);
+  print_message();
   return 0;
 }
